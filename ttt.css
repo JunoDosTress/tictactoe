@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+html, body {
+    background: url('./assets/b3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#app {
+    border: 3px solid black;
+    width: 90vmin;
+    height: 90vmin;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    background-color: wheat;
+    position: absolute;
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.title {
+    text-align: center;
+    justify-content: center;
+    height: 10vmin;
+}
+.header {
+    display: flex;
+    align-items: center;
+    background: grey;
+}
+.header > * {
+    color: whitesmoke;
+}
+.turn {
+    padding: 2vmin;
+}
+.status {
+    padding: 2vmin;
+    flex-grow: 1;
+    text-align: center;
+}
+.restart {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+}
+.board {
+    display: grid;
+    background: lightcoral;
+    gap: 1vmin;
+    padding: 1vmin;
+    flex-grow: 1;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+.tile {
+    background: orange;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15vmin;
+    font-family: cursive;
+    color: black;
+}
+
+.tile:hover {
+    background-color: bisque;
+}
+
+.tile-winner {
+    color: yellow;
+    
+}
+
+.material-symbols-outlined:hover{
+    background-color: beige;
+}
+.material-symbols-outlined {
+ color: black;
+ background: none;
+}
+
+@media only screen  and (max-width: 2000px), (min-width: 600px){
+    .title, .header, .board {
+        width: 100%;
+    }
+}
+.btn {
+    size: 2vmin;
+    display: flex;
+    flex-direction: row;    
+}
+.btn:hover {
+    cursor: pointer;
+}
+.previous, .next {
+    padding: 1vmin;
+    flex-grow: 1;
+}
+.previous:hover, .next:hover {
+    color: orange;
+}
